@@ -64,9 +64,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$ <span id="subtotal" >00</span> </h5>
+                        <h5>$ <span id="subtotal" >1278</span> </h5>
                         <h5>10%</h5>
-                        <h5>$ <span id="total" >00</span> </h5>
+                        <h5>$ <span id="total" >1278</span> </h5>
                      </div>
                   </div>
                </div>
@@ -90,8 +90,19 @@
          const price = document.getElementById("price").innerText;
          const priceNumber = parseFloat(price);
          document.getElementById("price").innerText = priceNumber +1219;
-         // total = priceNumber+1219;
+         const totalPrice = priceNumber+1219;
          // console.log(total);
+
+
+      //    const subtotal1 = document.getElementById("price").innerText;
+      // const subtotal1Number = parseFloat(subtotal1);
+      const subtotal = document.getElementById("price2").innerText;
+      const subtotalNumber = parseFloat(subtotal);
+      document.getElementById("subtotal").innerText = totalPrice + subtotalNumber;
+      
+      const total = document.getElementById("subtotal").innerText;
+      const totalNumber = parseFloat(total);
+      document.getElementById("total").innerText = totalNumber + (totalNumber * 0.1);
 
       })
 
@@ -107,8 +118,20 @@
          const priceMinus = document.getElementById("price").innerText;
          const priceMinusNumber = parseFloat(priceMinus);
          document.getElementById("price").innerText = priceMinusNumber - 1219;
-         // totalPriceMinus = priceMinusNumber -1219 
+         const totalPriceMinus = priceMinusNumber -1219 
          // console.log(totalPriceMinus);
+
+         
+         // const subtotal1 = document.getElementById("price").innerText;
+         // const subtotal1Number = parseFloat(subtotal1);
+         const subtotalMinus = document.getElementById("price2").innerText;
+         const subtotalMinusNumber = parseFloat(subtotalMinus);
+         document.getElementById("subtotal").innerText = totalPriceMinus + subtotalMinusNumber;
+
+         const totalMinus = document.getElementById("subtotal").innerText;
+         const totalMinusNumber = parseFloat(totalMinus);
+         document.getElementById("total").innerText = totalMinusNumber;
+
       })
 
       const plusBtn2 = document.getElementById("plus2");
@@ -122,8 +145,18 @@
          const price2 = document.getElementById("price2").innerText;
          const price2Number = parseFloat(price2);
          document.getElementById("price2").innerText = price2Number +59;
-         // total2 = price2Number+1219;
-         // console.log(total2);
+         const total2 = price2Number + 59;
+         //  console.log(total2);
+
+         const subtotal = document.getElementById("price").innerText;
+         const subtotalNumber = parseFloat(subtotal);
+         // const subtotal2 = document.getElementById("price2").innerText;
+         // const subtotal2Number = parseFloat(subtotal2);
+         document.getElementById("subtotal").innerText = total2 + subtotalNumber;
+
+         const total = document.getElementById("subtotal").innerText;
+         const totalNumber = parseFloat(total);
+         document.getElementById("total").innerText = totalNumber +(totalNumber *0.1);
       })
       const minus2Btn = document.getElementById("minus2");
       minus2Btn.addEventListener("click", function(){
@@ -131,14 +164,26 @@
          const inputMinus2 = document.getElementById("qty2").value;
          const inputMinus2Number = parseFloat(inputMinus2);
          document.getElementById("qty2").value = inputMinus2Number -1;
-         // totalMinus = inputMinusNumber -1;
+         // const totalMinus = inputMinusNumber -1;
          // console.log(totalMinus);
 
          const price2Minus = document.getElementById("price2").innerText;
          const price2MinusNumber = parseFloat(price2Minus);
          document.getElementById("price2").innerText = price2MinusNumber - 59;
-         // totalPrice2Minus = priceMinus2Number -1219 
+         const totalPrice2Minus = price2MinusNumber -59 
          // console.log(totalPrice2Minus);
+
+         
+         const subtotal = document.getElementById("price").innerText;
+         const subtotalNumber = parseFloat(subtotal);
+         // const subtotal2 = document.getElementById("price2").innerText;
+         // const subtotal2Number = parseFloat(subtotal2);
+         document.getElementById("subtotal").innerText = totalPrice2Minus + subtotalNumber;
+
+         const totalMinus = document.getElementById("subtotal").innerText;
+         const totalMinusNumber = parseFloat(totalMinus);
+         document.getElementById("total").innerText = totalMinusNumber;
+
       })
       
    </script>
